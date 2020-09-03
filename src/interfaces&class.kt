@@ -1,20 +1,20 @@
 interface A {
 
-    fun callMe() {
-        println("From interface A")
-    }
+    fun callMe()
 }
 
 interface B:A  {
-    override fun callMe() {
-        println("From interface b")
-    }
+    fun callMe2()
+
 
 }
 
 class C: A, B {
     override fun callMe() {
-        println("From class c")
+        println("From interface A")
+    }
+    override fun callMe2(){
+        println("From interface B")
     }
 }
 
@@ -22,4 +22,6 @@ fun main(args: Array<String>) {
     val obj = C()
 
     obj.callMe()
+    obj.callMe2()
+
 }

@@ -1,30 +1,28 @@
 open class Employee(name:String, age:Int, salary:Double) {
-    var name:String= name
-    var age:Int=age
-    var salary:Double= salary
+
 }
 
-class WebDeveloper(name:String,age:Int,salary:Double,special_skill:String):Employee(name,age,salary){
-    var special_skill:String=special_skill
+class WebDeveloper(var name:String,var age:Int,var salary:Double,var special_skill:String):Employee(name,age,salary){
 
-    fun get_info(){
+
+    fun website(){
 
         println("WebDeveloper name=$name,age=$age,salary=$salary,special_skill=$special_skill")
     }
 }
-class IOSeveloper(name:String,age:Int,salary:Double,special_skill:String):Employee(name,age,salary){
-    var special_skill:String=special_skill
+class IOSeveloper(var name:String,var age:Int,var salary:Double,var special_skill:String):Employee(name,age,salary){
 
-    fun get_info(){
+
+    fun iosapp(){
 
         println("IOSeveloper name=$name,age=$age,salary=$salary,special_skill=$special_skill")
     }
 
 }
-class AndroidDeveloper(name:String,age:Int,salary:Double,special_skill:String):Employee(name,age,salary){
-    var special_skill:String=special_skill
+class AndroidDeveloper(var name:String,var age:Int,var salary:Double,var special_skill:String):Employee(name,age,salary){
 
-    fun get_info(){
+
+    fun android(){
 
         println("AndroidDeveloper name=$name,age=$age,salary=$salary,special_skill=$special_skill")
     }
@@ -32,9 +30,9 @@ class AndroidDeveloper(name:String,age:Int,salary:Double,special_skill:String):E
 }
 fun main(){
  var a=WebDeveloper("ali",28,100.5,"Programming with php")
-a.get_info()
+a.website()
     var b=IOSeveloper("ahmed",27,120.5,"Programming with java")
-    b.get_info()
+    b.iosapp()
     var c=AndroidDeveloper("roqia",25,1110.5,"Programming with kotlin")
-    c.get_info()
+    c.android()
 }
